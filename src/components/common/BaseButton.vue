@@ -60,4 +60,3 @@ const handleClick = (event: MouseEvent) => {
   </button>
 </template>
 
-<style scoped></style>
