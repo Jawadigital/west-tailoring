@@ -16,6 +16,24 @@
   border-color: #c0392b;
 }
 
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:focus-visible {
+  background-color: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+  box-shadow: none !important;
+}
+
+.btn:active {
+  animation: btn-click 0.3s ease;
+}
+
+@keyframes btn-click {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
 .btn-outline-primary {
   color: var(--primary-color);
   border-color: var(--primary-color);

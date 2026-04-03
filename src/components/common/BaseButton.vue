@@ -3,7 +3,7 @@
 import { computed } from 'vue';
 
 interface Props {
-  variant?: 'primary' | 'secondary' | 'outline' | 'success';
+  variant?: 'primary' | 'outline' | 'secondary' | 'success';
   size?: 'sm' | 'md' | 'lg';
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
@@ -25,10 +25,10 @@ const buttonClass = computed(() => {
 
   if (props.variant === 'primary') {
     classes.push('btn-primary');
+  } else if (props.variant === 'outline') {
+    classes.push('btn-outline-light');
   } else if (props.variant === 'secondary') {
     classes.push('btn-secondary');
-  } else if (props.variant === 'outline') {
-    classes.push('btn-outline');
   } else if (props.variant === 'success') {
     classes.push('btn-success');
   }
