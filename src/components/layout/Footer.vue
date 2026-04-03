@@ -1,11 +1,32 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
 import SocialMediaLinks from '@/components/common/SocialMediaLinks.vue'
 import { contactInfo, socialMedia } from '@/data/contactInfo.ts'
 
 const contact = contactInfo
 const socialMediaList = socialMedia
 const currentYear = computed(() => new Date().getFullYear())
+
+const router = useRouter()
+const route = useRoute()
+
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id)
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' })
+  }
+}
+
+const scrollTo = (id: string) => {
+  if (route.path === '/') {
+    scrollToSection(id)
+  } else {
+    router.push('/').then(() => {
+      setTimeout(() => scrollToSection(id), 100)
+    })
+  }
+}
 </script>
 
 <template>
@@ -49,19 +70,19 @@ const currentYear = computed(() => new Date().getFullYear())
           <h5 class="fw-bold mb-3">Quick Links</h5>
           <ul class="list-unstyled">
             <li class="mb-2">
-              <a href="#home" class="text-white-50 text-decoration-none hover-link">Home</a>
+              <a href="#home" class="text-white-50 text-decoration-none hover-link" @click.prevent="scrollTo('home')">Home</a>
             </li>
             <li class="mb-2">
-              <a href="#why-us" class="text-white-50 text-decoration-none hover-link">Why Us</a>
+              <a href="#why-us" class="text-white-50 text-decoration-none hover-link" @click.prevent="scrollTo('why-us')">Why Us</a>
             </li>
             <li class="mb-2">
-              <a href="#services" class="text-white-50 text-decoration-none hover-link">Services</a>
+              <a href="#services" class="text-white-50 text-decoration-none hover-link" @click.prevent="scrollTo('services')">Services</a>
             </li>
             <li class="mb-2">
-              <a href="#reviews" class="text-white-50 text-decoration-none hover-link">Reviews</a>
+              <a href="#reviews" class="text-white-50 text-decoration-none hover-link" @click.prevent="scrollTo('reviews')">Reviews</a>
             </li>
             <li class="mb-2">
-              <a href="#contact" class="text-white-50 text-decoration-none hover-link">Contact</a>
+              <a href="#contact" class="text-white-50 text-decoration-none hover-link" @click.prevent="scrollTo('contact')">Contact</a>
             </li>
           </ul>
         </div>

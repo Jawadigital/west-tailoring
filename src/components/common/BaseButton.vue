@@ -26,7 +26,7 @@ const buttonClass = computed(() => {
   if (props.variant === 'primary') {
     classes.push('btn-primary');
   } else if (props.variant === 'outline') {
-    classes.push('btn-outline-light');
+    classes.push('btn-outline');
   } else if (props.variant === 'secondary') {
     classes.push('btn-secondary');
   } else if (props.variant === 'success') {

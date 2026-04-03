@@ -34,6 +34,17 @@
   100% { transform: scale(1); }
 }
 
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color) !important;
+  color: white;
+}
+
 .btn-outline-primary {
   color: var(--primary-color);
   border-color: var(--primary-color);

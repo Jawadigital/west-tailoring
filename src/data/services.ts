@@ -6,7 +6,7 @@ export const services: Service[] = [
     title: 'Custom Tailoring',
     description:
       'Bespoke clothing tailored to your exact measurements and preferences. Perfect fit guaranteed with premium fabrics.',
-    imageUrl: '/public/img/service.png',
+    imageUrl: `${import.meta.env.BASE_URL}placeholder.png`,
     detailText: `Custom tailoring is the art of creating garments built entirely around your body, your lifestyle, and your personality. Unlike off-the-rack clothing that is designed to fit a generalized size range, a bespoke garment is constructed from scratch using your precise measurements, ensuring every seam, dart, and cut works in harmony with your unique proportions.
        At TailoringPro, our custom tailoring process begins with an in-depth consultation where we take the time to understand not just your measurements, but how you live and move. Do you sit at a desk for long hours? Do you need a jacket that allows a full range of movement? Are you dressing for a boardroom, a wedding, or a weekend abroad? These questions shape every decision we make.
        We work with an extensive selection of premium fabrics sourced from the finest mills in Italy, England, and Portugal. Whether you prefer the crisp structure of a worsted wool, the breathable ease of a linen blend, or the luxurious drape of a silk-cotton mix, our team will guide you through the options and help you find the perfect cloth for your vision and the season.
@@ -54,7 +54,7 @@ export const services: Service[] = [
     title: 'Custom Tailoring',
     description:
       'Bespoke clothing tailored to your exact measurements and preferences. Perfect fit guaranteed with premium fabrics.',
-    imageUrl: '/public/img/service.png',
+    imageUrl: `${import.meta.env.BASE_URL}placeholder.png`,
     detailText: `Custom tailoring is the art of creating garments built entirely around your body, your lifestyle, and your personality. Unlike off-the-rack clothing that is designed to fit a generalized size range, a bespoke garment is constructed from scratch using your precise measurements, ensuring every seam, dart, and cut works in harmony with your unique proportions.
        At TailoringPro, our custom tailoring process begins with an in-depth consultation where we take the time to understand not just your measurements, but how you live and move. Do you sit at a desk for long hours? Do you need a jacket that allows a full range of movement? Are you dressing for a boardroom, a wedding, or a weekend abroad? These questions shape every decision we make.
        We work with an extensive selection of premium fabrics sourced from the finest mills in Italy, England, and Portugal. Whether you prefer the crisp structure of a worsted wool, the breathable ease of a linen blend, or the luxurious drape of a silk-cotton mix, our team will guide you through the options and help you find the perfect cloth for your vision and the season.
@@ -102,7 +102,7 @@ export const services: Service[] = [
     title: 'Custom Tailoring',
     description:
       'Bespoke clothing tailored to your exact measurements and preferences. Perfect fit guaranteed with premium fabrics.',
-    imageUrl: '/public/img/service.png',
+    imageUrl: `${import.meta.env.BASE_URL}placeholder.png`,
     detailText: `Custom tailoring is the art of creating garments built entirely around your body, your lifestyle, and your personality. Unlike off-the-rack clothing that is designed to fit a generalized size range, a bespoke garment is constructed from scratch using your precise measurements, ensuring every seam, dart, and cut works in harmony with your unique proportions.
        At TailoringPro, our custom tailoring process begins with an in-depth consultation where we take the time to understand not just your measurements, but how you live and move. Do you sit at a desk for long hours? Do you need a jacket that allows a full range of movement? Are you dressing for a boardroom, a wedding, or a weekend abroad? These questions shape every decision we make.
        We work with an extensive selection of premium fabrics sourced from the finest mills in Italy, England, and Portugal. Whether you prefer the crisp structure of a worsted wool, the breathable ease of a linen blend, or the luxurious drape of a silk-cotton mix, our team will guide you through the options and help you find the perfect cloth for your vision and the season.
@@ -150,7 +150,7 @@ export const services: Service[] = [
     title: 'Custom Tailoring',
     description:
       'Bespoke clothing tailored to your exact measurements and preferences. Perfect fit guaranteed with premium fabrics.',
-    imageUrl: '/public/img/service.png',
+    imageUrl: `${import.meta.env.BASE_URL}placeholder.png`,
     detailText: `Custom tailoring is the art of creating garments built entirely around your body, your lifestyle, and your personality. Unlike off-the-rack clothing that is designed to fit a generalized size range, a bespoke garment is constructed from scratch using your precise measurements, ensuring every seam, dart, and cut works in harmony with your unique proportions.
        At TailoringPro, our custom tailoring process begins with an in-depth consultation where we take the time to understand not just your measurements, but how you live and move. Do you sit at a desk for long hours? Do you need a jacket that allows a full range of movement? Are you dressing for a boardroom, a wedding, or a weekend abroad? These questions shape every decision we make.
        We work with an extensive selection of premium fabrics sourced from the finest mills in Italy, England, and Portugal. Whether you prefer the crisp structure of a worsted wool, the breathable ease of a linen blend, or the luxurious drape of a silk-cotton mix, our team will guide you through the options and help you find the perfect cloth for your vision and the season.
@@ -198,7 +198,7 @@ export const services: Service[] = [
     title: 'Custom Tailoring',
     description:
       'Bespoke clothing tailored to your exact measurements and preferences. Perfect fit guaranteed with premium fabrics.',
-    imageUrl: '/public/img/service.png',
+    imageUrl: `${import.meta.env.BASE_URL}placeholder.png`,
     detailText: `Custom tailoring is the art of creating garments built entirely around your body, your lifestyle, and your personality. Unlike off-the-rack clothing that is designed to fit a generalized size range, a bespoke garment is constructed from scratch using your precise measurements, ensuring every seam, dart, and cut works in harmony with your unique proportions.
        At TailoringPro, our custom tailoring process begins with an in-depth consultation where we take the time to understand not just your measurements, but how you live and move. Do you sit at a desk for long hours? Do you need a jacket that allows a full range of movement? Are you dressing for a boardroom, a wedding, or a weekend abroad? These questions shape every decision we make.
        We work with an extensive selection of premium fabrics sourced from the finest mills in Italy, England, and Portugal. Whether you prefer the crisp structure of a worsted wool, the breathable ease of a linen blend, or the luxurious drape of a silk-cotton mix, our team will guide you through the options and help you find the perfect cloth for your vision and the season.
@@ -246,7 +246,7 @@ export const services: Service[] = [
     title: 'Custom Tailoring',
     description:
       'Bespoke clothing tailored to your exact measurements and preferences. Perfect fit guaranteed with premium fabrics.',
-    imageUrl: '/public/img/service.png',
+    imageUrl: `${import.meta.env.BASE_URL}placeholder.png`,
     detailText: `Custom tailoring is the art of creating garments built entirely around your body, your lifestyle, and your personality. Unlike off-the-rack clothing that is designed to fit a generalized size range, a bespoke garment is constructed from scratch using your precise measurements, ensuring every seam, dart, and cut works in harmony with your unique proportions.
        At TailoringPro, our custom tailoring process begins with an in-depth consultation where we take the time to understand not just your measurements, but how you live and move. Do you sit at a desk for long hours? Do you need a jacket that allows a full range of movement? Are you dressing for a boardroom, a wedding, or a weekend abroad? These questions shape every decision we make.
        We work with an extensive selection of premium fabrics sourced from the finest mills in Italy, England, and Portugal. Whether you prefer the crisp structure of a worsted wool, the breathable ease of a linen blend, or the luxurious drape of a silk-cotton mix, our team will guide you through the options and help you find the perfect cloth for your vision and the season.

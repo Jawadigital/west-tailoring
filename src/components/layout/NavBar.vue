@@ -1,14 +1,16 @@
 <script setup lang="ts">
-import { inject } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
+import { Collapse } from 'bootstrap'
 import BaseButton from '@/components/common/BaseButton.vue'
 
-const navigateHome = inject<() => void>('navigateHome')
+const router = useRouter()
+const route = useRoute()
 
 const closeMobileMenu = () => {
   const navbarCollapse = document.getElementById('navbarNav')
   if (navbarCollapse?.classList.contains('show')) {
-    const bsCollapse = window.bootstrap?.Collapse.getInstance(navbarCollapse)
-    bsCollapse?.hide()
+    const bsCollapse = Collapse.getInstance(navbarCollapse) ?? new Collapse(navbarCollapse)
+    bsCollapse.hide()
   }
 }
 
@@ -19,39 +21,20 @@ const scrollToSection = (id: string) => {
   }
 }
 
-const waitForElement = (id: string, callback: () => void) => {
-  const maxAttempts = 40
-  let attempts = 0
-
-  const check = () => {
-    attempts++
-    if (document.getElementById(id)) {
-      callback()
-    } else if (attempts < maxAttempts) {
-      setTimeout(check, 50)
-    }
-  }
-
-  setTimeout(check, 50)
-}
-
 const scrollTo = (id: string) => {
   closeMobileMenu()
-
-  if (document.getElementById(id)) {
+  if (route.path === '/') {
     scrollToSection(id)
-    return
-  }
-
-  if (navigateHome) {
-    navigateHome()
-    waitForElement(id, () => scrollToSection(id))
+  } else {
+    router.push('/').then(() => {
+      setTimeout(() => scrollToSection(id), 100)
+    })
   }
 }
 
 const goHome = () => {
   closeMobileMenu()
-  navigateHome?.()
+  router.push('/')
 }
 </script>
 
@@ -80,15 +63,13 @@ const goHome = () => {
             <a class="nav-link" href="#home" @click.prevent="scrollTo('home')">Home</a>
           </li>
           <li>
-            <a class="nav-link" href="#why-us" @click.prevent="scrollTo('about')">Why Us</a>
+            <a class="nav-link" href="#why-us" @click.prevent="scrollTo('why-us')">Why Us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#services" @click.prevent="scrollTo('services')">Services</a>
           </li>
-          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-            <BaseButton @click="scrollTo('contact')">
-              Contact Us
-            </BaseButton>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact" @click.prevent="scrollTo('contact')">Contact Us</a>
           </li>
         </ul>
       </div>
