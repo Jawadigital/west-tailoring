@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import SectionHeader from '@/components/common/SectionHeader.vue'
 import { contactInfo } from '@/data/contactInfo'
+
+const openGoogleMaps = () => {
+  const query = encodeURIComponent(
+    'West Tailoring & Alterations, 208 Rodbourne Rd, Swindon SN2 2AA, United Kingdom',
+  )
+  window.open(`https://www.google.com/maps/search/?api=1&query=${query}`, '_blank')
+}
 </script>
 
 <template>
@@ -30,7 +37,7 @@ import { contactInfo } from '@/data/contactInfo'
         </div>
 
         <div class="col-lg-3 col-md-6">
-          <div class="contact-card">
+          <div class="contact-card" style="cursor:pointer" @click="openGoogleMaps">
             <i class="bi bi-geo-alt-fill fs-2 mb-3"></i>
             <h5 class="fw-bold">Visit Us</h5>
             <p class="mb-0">{{ contactInfo.address }}</p>

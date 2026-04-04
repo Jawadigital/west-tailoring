@@ -37,7 +37,7 @@ const scrollToServices = () => {
             tailoring.
           </p>
           <div class="d-flex gap-3 justify-content-center align-items-center">
-            <BaseButton size="lg" @click="scrollToContact"> Contact Us Today</BaseButton>
+            <BaseButton size="lg" @click="scrollToContact">Get in touch</BaseButton>
             <BaseButton size="lg" variant="outline" @click="scrollToServices">Our Services</BaseButton>
           </div>
         </div>

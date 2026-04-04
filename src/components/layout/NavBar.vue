@@ -53,7 +53,7 @@ const goHome = () => {
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
-      <a class="navbar-brand fw-bold fs-4 text-primary-custom" href="#" @click.prevent="goHome">
+      <a class="navbar-brand fw-bold text-primary-custom" href="#" @click.prevent="goHome">
         West Tailoring & Alterations
       </a>
 
@@ -91,6 +91,16 @@ const goHome = () => {
 </template>
 
 <style scoped>
+.navbar-brand {
+  font-size: 1rem;
+}
+
+@media (min-width: 992px) {
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+}
+
 .nav-link {
   font-weight: 500;
   transition: color 0.3s ease;
