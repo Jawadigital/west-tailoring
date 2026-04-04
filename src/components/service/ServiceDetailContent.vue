@@ -54,7 +54,7 @@ const paragraphs = computed(() =>
               <ul class="list-unstyled mb-0">
                 <li
                   v-for="item in service.includes"
-                  :key="item"
+                  :key="String(item)"
                   class="d-flex align-items-start gap-3 mb-3"
                 >
                   <i class="bi bi-check2 text-success mt-1 fw-bold flex-shrink-0"></i>

@@ -1,5 +1,5 @@
 <template>
-  <div class="service-detail-page">
+  <div class="service-detail-page" v-if="service">
     <ServiceDetailHero :service="service" />
     <ServiceDetailContent :service="service" />
     <MapSection />
