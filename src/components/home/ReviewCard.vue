@@ -63,7 +63,7 @@ const formatDate = (dateString: string): string => {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  background: linear-gradient(135deg, #cc2222, #8b0000);
   color: white;
   display: flex;
   align-items: center;

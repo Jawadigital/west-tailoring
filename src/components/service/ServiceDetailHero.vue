@@ -140,9 +140,17 @@ const scrollToDetails = () =>
   .service-hero {
     min-height: auto;
     padding: 5rem 0 6rem;
+    overflow: hidden;
   }
   .hero-accent {
     display: none;
+  }
+  .hero-title {
+    font-size: 2rem;
+    word-break: break-word;
+  }
+  .hero-subtitle {
+    font-size: 1rem !important;
   }
 }
 </style>

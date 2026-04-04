@@ -5,7 +5,7 @@ import { whyUs } from '@/data/whyUs.ts';
 </script>
 
 <template>
-  <section id="why-us" class="section-padding bg-white">
+  <section id="why-us" class="section-padding fabric-bg">
     <div class="container">
       <SectionHeader
         title="Why Choose Us"

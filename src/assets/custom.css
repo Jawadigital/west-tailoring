@@ -1,32 +1,83 @@
 /* ── Color variables ── */
 :root {
-  --primary-color:   #1c1c1c;
-  --secondary-color: #cc2222;
-  --accent-color:    #2a2a2a;
-  --bg-primary:      #1c1c1c;
-  --bg-secondary:    #242424;
-  --bg-card:         #2e2e2e;
-  --text-muted-color: rgba(255, 255, 255, 0.6);
-  --border-subtle:   rgba(255, 255, 255, 0.1);
+  --primary-color:    #1a1a1a;
+  --secondary-color:  #e5583d;
+  --accent-hover:     #e13838;
+  --bg-primary:       #ffffff;
+  --bg-secondary:     #f9f7f5;
+  --bg-card:          #ffffff;
+  --text-muted-color: rgba(0, 0, 0, 0.55);
+  --border-subtle:    rgba(0, 0, 0, 0.1);
 }
 
 /* ── Base ── */
 body {
   background-color: var(--bg-primary);
-  color: #ffffff;
+  color: var(--primary-color);
+  overflow-x: hidden;
 }
+
+/* ── Tailoring decorations ── */
+
+/* Stitch divider — dashed line between sections */
+.stitch-divider {
+  border: none;
+  border-top: 2px dashed var(--secondary-color);
+  opacity: 0.25;
+  margin: 0;
+}
+
+/* Fabric dot pattern background */
+.fabric-bg {
+  background-color: var(--bg-secondary);
+  background-image: radial-gradient(circle, rgba(0,0,0,0.07) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Stitch underline on section titles */
+.stitch-title::after {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 3px;
+  margin: 0.75rem auto 0;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--secondary-color) 0px,
+    var(--secondary-color) 8px,
+    transparent 8px,
+    transparent 13px
+  );
+}
+
+/* Thread line decoration for left-aligned titles */
+.stitch-title-left::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  margin: 0.75rem 0 0;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--secondary-color) 0px,
+    var(--secondary-color) 8px,
+    transparent 8px,
+    transparent 13px
+  );
+}
+
 
 /* ── Bootstrap overrides – backgrounds ── */
 .bg-white {
-  background-color: var(--bg-secondary) !important;
+  background-color: #ffffff !important;
 }
 
 .bg-light-custom {
-  background-color: var(--bg-primary) !important;
+  background-color: var(--bg-secondary) !important;
 }
 
 .bg-dark-custom {
-  background-color: #000000 !important;
+  background-color: #1a1a1a !important;
 }
 
 /* ── Bootstrap overrides – text ── */
@@ -39,7 +90,7 @@ body {
 }
 
 .text-primary-custom {
-  color: #ffffff !important;
+  color: var(--primary-color) !important;
 }
 
 .text-secondary-custom {
@@ -48,8 +99,8 @@ body {
 
 /* ── Navbar ── */
 .navbar {
-  background-color: var(--bg-primary) !important;
-  border-bottom: 1px solid var(--border-subtle);
+  background-color: var(--secondary-color) !important;
+  border-bottom: none;
 }
 
 .navbar-brand {
@@ -57,32 +108,21 @@ body {
 }
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: rgba(255, 255, 255, 0.85) !important;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: var(--secondary-color) !important;
+  color: #ffffff !important;
 }
 
-.navbar-toggler {
-  border-color: var(--border-subtle);
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255,255,255,0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-.navbar-toggler {
-  border-color: rgba(255, 255, 255, 0.3) !important;
-}
 
 /* ── Cards ── */
 .card {
   background-color: var(--bg-card) !important;
   border-color: var(--border-subtle) !important;
-  color: #ffffff;
+  color: var(--primary-color);
 }
 
 .border-top {
@@ -91,24 +131,24 @@ body {
 
 /* ── Forms ── */
 .form-control {
-  background-color: var(--bg-card);
-  border-color: var(--border-subtle);
-  color: #ffffff;
+  background-color: #ffffff;
+  border-color: rgba(0, 0, 0, 0.15);
+  color: var(--primary-color);
 }
 
 .form-control:focus {
-  background-color: var(--bg-card);
-  color: #ffffff;
+  background-color: #ffffff;
+  color: var(--primary-color);
   border-color: var(--secondary-color);
-  box-shadow: 0 0 0 0.2rem rgba(224, 82, 82, 0.2);
+  box-shadow: 0 0 0 0.2rem rgba(204, 34, 34, 0.15);
 }
 
 .form-control::placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(0, 0, 0, 0.35);
 }
 
 .form-label {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--primary-color);
 }
 
 /* ── Buttons ── */
@@ -119,8 +159,8 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #aa1a1a;
-  border-color: #aa1a1a;
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
 }
 
 .btn-primary:active,
@@ -133,24 +173,24 @@ body {
 
 .btn-outline {
   background-color: transparent;
-  border: 2px solid #ffffff;
-  color: #ffffff;
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 .btn-outline:hover {
-  background-color: #ffffff !important;
-  border-color: #ffffff !important;
-  color: #1c1c1c !important;
+  background-color: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+  color: #ffffff !important;
 }
 
 .btn-outline-secondary {
-  border-color: rgba(255, 255, 255, 0.4) !important;
-  color: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(0, 0, 0, 0.3) !important;
+  color: var(--primary-color) !important;
 }
 
 .btn-outline-secondary:hover {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  color: #ffffff !important;
+  background-color: rgba(0, 0, 0, 0.06) !important;
+  color: var(--primary-color) !important;
 }
 
 .btn:active {
@@ -165,14 +205,14 @@ body {
 
 /* ── Alerts ── */
 .alert-success {
-  background-color: rgba(39, 174, 96, 0.15);
+  background-color: rgba(39, 174, 96, 0.1);
   border-color: rgba(39, 174, 96, 0.3);
-  color: #2ecc71;
+  color: #1a7a40;
 }
 
 .alert-danger {
-  background-color: rgba(224, 82, 82, 0.15);
-  border-color: rgba(224, 82, 82, 0.3);
+  background-color: rgba(204, 34, 34, 0.1);
+  border-color: rgba(204, 34, 34, 0.3);
   color: var(--secondary-color);
 }
 
@@ -194,10 +234,15 @@ html {
 
 /* ── Card hover effect ── */
 .card-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, border-style 0.3s ease;
 }
 
 .card-hover:hover {
   transform: translateY(-5px);
-  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.4) !important;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ── Navbar toggler ── */
+.navbar-toggler {
+  border-color: rgba(0, 0, 0, 0.2) !important;
 }

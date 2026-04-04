@@ -66,10 +66,10 @@ const openGoogleMaps = () => {
   padding: 2rem;
   border-radius: 12px;
   background-color: var(--bg-card);
-  color: #ffffff;
+  color: var(--secondary-color);
   height: 100%;
-  transition: border-color 0.3s, transform 0.3s;
-  border: 1px solid var(--border-subtle);
+  transition: border-color 0.3s, transform 0.3s, border-style 0.3s;
+  border: 2px dashed rgba(204, 34, 34, 0.3);
 }
 
 .contact-card:hover {

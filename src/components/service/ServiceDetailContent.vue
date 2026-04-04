@@ -18,7 +18,7 @@ const paragraphs = computed(() =>
 </script>
 
 <template>
-  <div id="service-details">
+  <div id="service-details" style="overflow-x: hidden">
     <!-- About This Service -->
     <section class="section-padding bg-white">
       <div class="container">
@@ -120,9 +120,9 @@ const paragraphs = computed(() =>
 
 /* Includes card */
 .includes-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  color: #ffffff;
+  background: var(--bg-secondary);
+  border: 2px dashed rgba(204, 34, 34, 0.25);
+  color: var(--primary-color);
 }
 
 .includes-icon {
@@ -132,7 +132,8 @@ const paragraphs = computed(() =>
 
 /* Highlight card */
 .highlight-card {
-  background: linear-gradient(190deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(260deg, var(--accent-hover), var(--secondary-color));
+  box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .highlight-icon {
@@ -143,6 +144,7 @@ const paragraphs = computed(() =>
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Process cards */
@@ -154,10 +156,10 @@ const paragraphs = computed(() =>
 }
 
 .process-card {
-  background: var(--bg-card) !important;
+  background: #ffffff !important;
   border: 1px solid var(--border-subtle);
-  transition: border-color 0.3s;
-  color: #ffffff;
+  transition: border-color 0.3s, border-style 0.3s;
+  color: var(--primary-color);
 }
 
 .process-card:hover {

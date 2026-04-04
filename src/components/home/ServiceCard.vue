@@ -36,9 +36,9 @@ const handleLearnMore = () => {
 
       <template #footer>
         <div class="text-center">
-          <BaseButton variant="outline" @click="handleLearnMore">
+          <button class="btn btn-outline-dark btn-sm" @click="handleLearnMore">
             Learn More
-          </BaseButton>
+          </button>
         </div>
       </template>
     </BaseCard>

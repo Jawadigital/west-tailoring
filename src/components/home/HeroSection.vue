@@ -38,7 +38,7 @@ const scrollToServices = () => {
           </p>
           <div class="d-flex gap-3 justify-content-center align-items-center">
             <BaseButton size="lg" @click="scrollToContact">Get in touch</BaseButton>
-            <BaseButton size="lg" variant="outline" @click="scrollToServices">Our Services</BaseButton>
+            <button class="btn btn-outline-light btn-lg" @click="scrollToServices">Our Services</button>
           </div>
         </div>
       </div>
