@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { inject } from 'vue'
+import { useRouter } from 'vue-router'
 import BaseButton from '@/components/common/BaseButton.vue'
 import type { Service } from '@/types/Service'
 
@@ -9,9 +9,8 @@ interface Props {
 
 defineProps<Props>()
 
-const navigateHome = inject<() => void>('navigateHome')
-
-const goBack = () => navigateHome?.()
+const router = useRouter()
+const goBack = () => router.push('/')
 const scrollToContact = () =>
   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
 const scrollToDetails = () =>

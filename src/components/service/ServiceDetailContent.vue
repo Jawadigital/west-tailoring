@@ -120,8 +120,9 @@ const paragraphs = computed(() =>
 
 /* Includes card */
 .includes-card {
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: #ffffff;
 }
 
 .includes-icon {
@@ -131,7 +132,7 @@ const paragraphs = computed(() =>
 
 /* Highlight card */
 .highlight-card {
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(190deg, var(--primary-color), var(--secondary-color));
 }
 
 .highlight-icon {
@@ -150,12 +151,13 @@ const paragraphs = computed(() =>
   font-weight: 800;
   line-height: 1;
   color: var(--secondary-color);
-  opacity: 0.25;
 }
 
 .process-card {
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-subtle);
   transition: border-color 0.3s;
+  color: #ffffff;
 }
 
 .process-card:hover {
@@ -163,6 +165,6 @@ const paragraphs = computed(() =>
 }
 
 .process-card:hover .process-number {
-  opacity: 0.6;
+  opacity: 1.2;
 }
 </style>

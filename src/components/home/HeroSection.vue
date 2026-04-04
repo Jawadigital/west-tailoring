@@ -37,8 +37,8 @@ const scrollToServices = () => {
             tailoring.
           </p>
           <div class="d-flex gap-3 justify-content-center align-items-center">
-            <BaseButton size="lg" @click="scrollToContact"> Contact Today</BaseButton>
-            <BaseButton size="lg" @click="scrollToServices">Our Services</BaseButton>
+            <BaseButton size="lg" @click="scrollToContact"> Contact Us Today</BaseButton>
+            <BaseButton size="lg" variant="outline" @click="scrollToServices">Our Services</BaseButton>
           </div>
         </div>
       </div>
@@ -48,7 +48,7 @@ const scrollToServices = () => {
 
 <style scoped>
 .hero-section {
-  min-height: 100vh;
+  min-height: 90vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

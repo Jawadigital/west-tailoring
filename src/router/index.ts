@@ -25,6 +25,7 @@ const router = createRouter({
     { path: '/service/:id', component: ServiceDetailPage },
   ],
   scrollBehavior() {
+    if (history.state?.skipScroll) return false
     slowScrollToTop()
     return false
   },

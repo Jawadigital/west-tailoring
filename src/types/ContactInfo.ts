@@ -15,10 +15,3 @@ export interface SocialMedia {
   icon: string
 }
 
-export interface ContactFormData {
-  name: string
-  email: string
-  phone: string
-  selectedService?: string
-  message: string
-}
